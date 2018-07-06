@@ -1,0 +1,16 @@
+<div id="top">
+    <div id="top-home">
+        <a href="/" title="home">{{ .Site.Title }}</a>
+    </div>
+    <nav id="top-menu">
+        <ul>
+            {{ $currentSectionUrl := ( index (split .URL "/") 1 )  }}
+            {{ range .Site.Sections }}
+            {{ $sectionUrl := ( index (split .URL "/") 1 )  }}
+            <li>
+                <a href="{{ .URL }}" {{if (eq $currentSectionUrl $sectionUrl) }} class="active"{{end}}>{{ .Name }}</a>
+            </li>
+            {{end}}
+        </ul>
+    </nav>
+</div>

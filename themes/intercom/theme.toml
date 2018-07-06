@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "Intercom"
+license = "MIT"
+licenselink = "https://github.com/Rantanen/intercom/master/LICENSE.md"
+description = "Hugo theme for Intercom documentation"
+tags = []
+features = []
+min_version = 0.19
+
+[author]
+  name = "Rantanen"
+  homepage = "http://github.com/Rantanen"
+ 

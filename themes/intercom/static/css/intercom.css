@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Fira+Sans|Montserrat:400,600|Open+Sans|Dosis:600|Vollkorn:700|Laila|Patua+One|Source+Sans+Pro:300");
+html {
+  font: 13pt/1.5 "Open Sans";
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+code, code * {
+  font-family: Consolas;
+}
+
+a {
+  color: #5566bb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  font-weight: 600;
+}
+
+#content {
+  max-width: 1000px;
+  margin: auto;
+  padding-left: 200px;
+  text-rendering: optimizeLegibility;
+}
+#content h1, #content h2, #content h3, #content h4 {
+  font-family: "Montserrat";
+}
+
+#hero {
+  text-align: center;
+  padding-bottom: 1.2em;
+}
+
+#hero h1 {
+  font: 500 350% "Patua One", "Laila", "Patua One", Arial, cursive;
+}
+
+#hero p {
+  font: 600 140% "Dosis", "Arial", sans-serif;
+}
+
+#main {
+  margin: auto;
+  margin-top: 100px;
+}
+
+#top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  font-family: "Montserrat";
+  font-size: 120%;
+  padding: 0 36px;
+}
+
+#top a {
+  font-size: 100%;
+}
+
+#top a:hover {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: underline;
+}
+
+#top ul {
+  display: flex;
+  align-items: center;
+}
+
+#top li {
+  display: block;
+  margin: 0 10px;
+}
+
+#top li a {
+  color: black;
+  text-decoration: none;
+}
+
+#top-home {
+  font-weight: 600;
+  font-size: 120%;
+}
+
+tree {
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  width: calc( ( 100vw - 1000px ) / 2 );
+}
+
+#section-nav {
+  padding: 3ex;
+}
+
+#section-nav h1 {
+  font-family: "Montserrat";
+  font-size: 13pt;
+}
+
+#section-nav ol {
+  line-height: 150%;
+  list-style: none;
+  padding-left: 20px;
+}
+
+#section-nav .page-toc {
+  padding-left: 15px;
+}
+
+#section-nav .page-toc > ol > :last-child {
+  /* Defining the margin on the last list item ties the margin presence to
+   * the list item existence. If the page has no internal TOC, there will be
+   * no extra margin.
+   */
+  margin-bottom: 10px;
+}
+
+#action-buttons {
+  text-align: center;
+}
+
+a.button {
+  border: 3px solid #5566bb;
+  padding: 1ex 2ex;
+  font-size: 130%;
+  font-weight: 600;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+a.button.primary {
+  border: 3px solid #5566bb;
+  background: #5566bb;
+  color: white;
+  padding: 1ex 2ex;
+  font-size: 130%;
+  font-weight: 600;
+}
+
+#action-buttons + #intro {
+  margin-top: 100px;
+}
+
+#intro {
+  font: 140% "Source Sans Pro", "Arial", sans-serif;
+  margin: auto;
+  max-width: 800px;
+}
+
+#intro .highlight {
+  font-size: 12pt;
+  padding: 0 20px;
+  max-width: 600px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=intercom.css.map */

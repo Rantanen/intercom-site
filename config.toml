@@ -1,0 +1,18 @@
+title = "Intercom"
+description = "Intercom is stuff"
+
+baseURL = "https://intercom.jubjubnest.net"
+theme = "intercom"
+
+languageCode = "en-us"
+toc = true
+uglyUrls = true
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[Params]
+    github = "https://github.com/Rantanen/intercom"
+
+[[menu.main]]
+    name = "Docs"
+    url = "/docs/"

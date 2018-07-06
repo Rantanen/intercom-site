@@ -1,0 +1,51 @@
+{{ if or (not (isset .Params "tree")) .Params.tree }}
+{{ $home := .Site.Home }}
+<nav id="section-nav" class="toc">
+    {{ range .Site.Sections }}
+    <h1>{{.Title}}</h1>
+    {{ template "section-tree-nav" (dict "page" . "current" $) }}
+    {{ end }}
+</nav>
+{{ end }}
+
+{{ define "section-tree-nav" }}
+{{ $current := .current }}
+<ol class="toc">
+    {{ range .page.Pages }}
+    <li class="page">
+        {{ template "section-tree-label" (dict "page" . "current" $current) }}
+    </li>
+    {{ end }}
+    {{ range .page.Sections }}
+    <li class="section">
+        {{ template "section-tree-label" (dict "page" . "current" $current) }}
+    </li>
+    {{ template "section-tree-nav" (dict "page" . "current" $current) }}
+    {{ end }}
+</ol>
+{{ end }}
+
+{{ define "section-tree-label" }}
+{{ if (eq .current.URL .page.URL) }}
+<span class="label active">
+    {{ .page.Title }}
+</span>
+<div class="page-toc"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    tocbot.init({
+        tocSelector: "#section-nav .page-toc",
+        contentSelector: "#main #content",
+        headingSelector: 'h2, h3',
+        activeLinkClass: 'active',
+    });
+});
+</script>
+{{ else }}
+<span class="label">
+    <a href="{{ .page.RelPermalink }}" class="{{if (eq .current.URL .page.URL) }}active{{ end }}">
+        {{ .page.Title }}
+    </a>
+</span>
+{{ end }}
+{{ end }}
